@@ -26,9 +26,9 @@
           let isBitcoin = data[i].nombre.toLowerCase().includes('bitcoin');
           html += `<div class="dolar-card">
             <strong>${data[i].nombre}</strong>
-            ${isOficial ? '<div style="display:flex;justify-content:center;"><img src="bcv.webp" alt="BDV" style="height:20vh;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
-            ${isParalelo ? '<div style="display:flex;justify-content:center;"><img src="enparalelo.webp" alt="Paralelo" style="height:20vh;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
-            ${isBitcoin ? '<div style="display:flex;justify-content:center;"><img src="binance.svg" alt="Binance" style="height:20vh;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
+            ${isOficial ? '<div style="display:flex;justify-content:center;"><img src="bcv.webp" alt="BDV" style="max-height:20vh;max-width:90vw;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
+            ${isParalelo ? '<div style="display:flex;justify-content:center;"><img src="enparalelo.webp" alt="Paralelo" style="max-height:20vh;max-width:90vw;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
+            ${isBitcoin ? '<div style="display:flex;justify-content:center;"><img src="binance.svg" alt="Binance" style="max-height:20vh;max-width:90vw;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
             <div>Bs ${data[i].promedio}</div>
           </div>`;
         }
