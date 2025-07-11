@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>dolarcashmoney</title>
+</head>
+<body>
+  <h1>Precio oficial del dólar</h1>
+  <div class="parent">
+    <p id="dolar"></p>
+  </div>
+  <div class="parent-2">
+    <a href="">creador rushml "practicando como implementar una API"</a>
+    <a href="">API de ve.dolarapi.com</a>
+  </div>
+  <script>
+    fetch('https://ve.dolarapi.com/v1/dolares')
+      .then(response => response.json())
+      .then(data => {
+        // Mostrar los 3 primeros valores del JSON
+        let html = '';
+        for (let i = 0; i < 3 && i < data.length; i++) {
+          html += `<strong>${data[i].nombre}:</strong> Bs ${data[i].promedio}<br><br>`;
+        }
+        document.getElementById('dolar').innerHTML = html;
+      })
+      .catch(error => {
+        console.error('Error al consultar la API:', error);
+        document.getElementById('dolar').textContent = 'No se pudo obtener el valor';
+      });
+  </script>
+</body>
+</html>
+
+
+

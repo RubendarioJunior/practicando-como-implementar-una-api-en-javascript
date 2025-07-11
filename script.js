@@ -1,0 +1,1 @@
+fetch('https://ve.dolarapi.com/v1/dolares/oficial')

@@ -1,0 +1,92 @@
+/* Estilo general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(to right, #e5ff00, #3246f3, #ec0c0c);
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  color: #4e0808;
+  text-align: center;
+}
+
+.parent {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 1;
+}
+
+.parent-2 {
+    display: flex; 
+    justify-content:center; 
+    align-items: center;
+    margin-top: 45vh;
+    padding: 1.8vh;
+    background-color: #4e0808;
+}
+
+.child {
+    display: inline-block;
+    font-size: 30px;
+}
+
+/* Botones */
+button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+/* Tarjetas */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Enlaces */
+a {
+  color: #d50176;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-left: 5vh;
+}
+
+a:hover {
+  color: #ff38c3;
+}
+
+/* Formularios */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
