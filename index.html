@@ -8,12 +8,11 @@
 </head>
 <body>
   <h1>Precio oficial del dólar</h1>
-  <div class="parent">
-    <p id="dolar"></p>
-  </div>
+  <div class="parent" id="dolar"></div>
   <div class="parent-2">
-    <a href="">creador rushml "practicando como implementar una API"</a>
-    <a href="">API de ve.dolarapi.com</a>
+    <a href="">© creador rushml "practicando como implementar una API"</a>
+    <a href="">API utilizada: ve.dolarapi.com</a>
+    <a href="">2025</a>
   </div>
   <script>
     fetch('https://ve.dolarapi.com/v1/dolares')
@@ -22,7 +21,16 @@
         // Mostrar los 3 primeros valores del JSON
         let html = '';
         for (let i = 0; i < 3 && i < data.length; i++) {
-          html += `<strong>${data[i].nombre}:</strong> Bs ${data[i].promedio}<br><br>`;
+          let isOficial = data[i].nombre.toLowerCase().includes('oficial');
+          let isParalelo = data[i].nombre.toLowerCase().includes('paralelo');
+          let isBitcoin = data[i].nombre.toLowerCase().includes('bitcoin');
+          html += `<div class="dolar-card">
+            <strong>${data[i].nombre}</strong>
+            ${isOficial ? '<div style="display:flex;justify-content:center;"><img src="bcv.webp" alt="BDV" style="height:20vh;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
+            ${isParalelo ? '<div style="display:flex;justify-content:center;"><img src="enparalelo.webp" alt="Paralelo" style="height:20vh;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
+            ${isBitcoin ? '<div style="display:flex;justify-content:center;"><img src="binance.svg" alt="Binance" style="height:20vh;width:auto;margin:8px auto 8px auto;display:block;"></div>' : ''}
+            <div>Bs ${data[i].promedio}</div>
+          </div>`;
         }
         document.getElementById('dolar').innerHTML = html;
       })
