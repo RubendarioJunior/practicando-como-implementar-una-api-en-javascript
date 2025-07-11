@@ -1,32 +1,48 @@
+/* Contenedor principal para que el footer quede abajo */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 @media (max-width: 600px) {
+  .main-content {
+    min-height: 0;
+    padding-bottom: 10vw;
+  }
   .parent {
     flex-direction: column;
     align-items: center;
-    gap: 18px;
-    margin: 18px auto 12px auto;
-    max-width: 98vw;
+    gap: 10px;
+    margin: 10px auto 8px auto;
+    max-width: 99vw;
+    width: 100vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    box-sizing: border-box;
   }
   .dolar-card {
     min-width: 0;
-    max-width: 98vw;
-    width: 98vw;
-    font-size: 1rem;
-    padding: 14px 4vw 14px 4vw;
+    max-width: 84vw;
+    width: 84vw;
+    font-size: 0.9rem;
+    padding: 4px 8vw 4px 8vw;
+    box-sizing: border-box;
   }
   .dolar-card img {
-    max-width: 80vw !important;
+    max-width: 55vw !important;
     height: auto !important;
-    max-height: 24vh !important;
+    max-height: 10vh !important;
   }
   .parent-2 {
     flex-direction: column;
-    gap: 8px;
-    font-size: 0.98em;
-    padding: 1.2vh 2vw;
+    gap: 6px;
+    font-size: 0.95em;
+    padding: 0.8vh 2vw;
   }
   h1 {
-    font-size: 1.3em;
-    margin: 12px 0 8px 0;
+    font-size: 1.1em;
+    margin: 8px 0 6px 0;
   }
 }
 /* === ESTILO INSPIRADO EN LA BANDERA DE VENEZUELA === */
@@ -55,20 +71,24 @@ h1, h2, h3 {
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-  gap: 32px;
-  margin: 40px auto 30px auto;
-  max-width: 700px;
+  gap: 24px;
+  margin: 32px auto 24px auto;
+  max-width: 900px;
+  width: 95vw;
+  box-sizing: border-box;
 }
 
 .dolar-card {
   background: linear-gradient(160deg, #ffe600 0%, #0057b7 80%, #ef3340 100%);
-  border-radius: 18px;
+  border-radius: 14px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
-  padding: 28px 32px 22px 32px;
+  padding: 14px 10px 14px 10px;
   text-align: center;
-  font-size: 1.18rem;
+  font-size: 1rem;
   color: #fff;
-  min-width: 170px;
+  min-width: 120px;
+  max-width: 220px;
+  flex: 1 1 180px;
   border: 2px solid #fff;
   margin: 0;
   font-family: 'San Francisco', 'Poppins', 'Segoe UI', Arial, sans-serif;
@@ -77,12 +97,51 @@ h1, h2, h3 {
   transition: box-shadow 0.18s, border 0.18s;
 }
 .dolar-card strong {
-  font-size: 1.08em;
+  font-size: 1em;
   color: #ffe600;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   display: block;
   text-shadow: 0 1px 4px #0057b7cc;
+}
+@media (max-width: 600px) {
+  .main-content {
+    min-height: 0;
+    padding-bottom: 10vw;
+  }
+  .parent {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px auto 8px auto;
+    max-width: 99vw;
+    width: 100vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    box-sizing: border-box;
+  }
+  .dolar-card {
+    min-width: 0;
+    max-width: 99vw;
+    width: 99vw;
+    font-size: 0.9rem;
+    padding: 4px 1vw 4px 1vw;
+  }
+  .dolar-card img {
+    max-width: 55vw !important;
+    height: auto !important;
+    max-height: 10vh !important;
+  }
+  .parent-2 {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95em;
+    padding: 0.8vh 2vw;
+  }
+  h1 {
+    font-size: 1.1em;
+    margin: 8px 0 6px 0;
+  }
 }
 
 .parent-2 {
